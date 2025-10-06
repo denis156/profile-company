@@ -2,12 +2,12 @@
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
         {{-- Section Header --}}
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-            <span class="badge badge-accent badge-lg">Kepercayaan Klien</span>
+            <span class="badge badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
             <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                Mitra & Klien Kami
+                {{ $this->getText($content['heading']) }}
             </h2>
             <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
-                Dipercaya oleh berbagai perusahaan dan institusi untuk proyek konstruksi dan penyediaan material
+                {{ $this->getText($content['description']) }}
             </p>
         </div>
 
@@ -23,10 +23,10 @@
                                 class="h-8 text-primary group-hover:text-primary-content transition-colors" />
                         </div>
                         <div class="space-y-2">
-                            <span class="badge badge-primary badge-sm">Pertambangan</span>
-                            <h3 class="text-xl font-bold text-base-content">Industri Nikel</h3>
+                            <span class="badge badge-primary badge-sm">{{ $this->getText($content['category1_badge']) }}</span>
+                            <h3 class="text-xl font-bold text-base-content">{{ $this->getText($content['category1_title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Mitra strategis dari perusahaan pertambangan nikel terkemuka di Indonesia
+                                {{ $this->getText($content['category1_desc']) }}
                             </p>
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                                 class="h-8 text-secondary group-hover:text-secondary-content transition-colors" />
                         </div>
                         <div class="space-y-2">
-                            <span class="badge badge-secondary badge-sm">Mining & Trading</span>
-                            <h3 class="text-xl font-bold text-base-content">Stone Mining</h3>
+                            <span class="badge badge-secondary badge-sm">{{ $this->getText($content['category2_badge']) }}</span>
+                            <h3 class="text-xl font-bold text-base-content">{{ $this->getText($content['category2_title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Kerjasama dengan perusahaan stone mining dan trading material tambang
+                                {{ $this->getText($content['category2_desc']) }}
                             </p>
                         </div>
                     </div>
@@ -63,10 +63,10 @@
                                 class="h-8 text-accent group-hover:text-accent-content transition-colors" />
                         </div>
                         <div class="space-y-2">
-                            <span class="badge badge-accent badge-sm">Konstruksi</span>
-                            <h3 class="text-xl font-bold text-base-content">Perusahaan Konstruksi</h3>
+                            <span class="badge badge-accent badge-sm">{{ $this->getText($content['category3_badge']) }}</span>
+                            <h3 class="text-xl font-bold text-base-content">{{ $this->getText($content['category3_title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Dipercaya oleh kontraktor dan perusahaan konstruksi untuk supply material
+                                {{ $this->getText($content['category3_desc']) }}
                             </p>
                         </div>
                     </div>
@@ -77,8 +77,7 @@
         {{-- CTA to Mitra Page --}}
         <div class="text-center pt-12" data-aos="fade-up" data-aos-delay="500">
             <a href="/mitra" wire:navigate class="btn btn-primary btn-lg gap-2 shadow-lg group">
-                <x-icon name="o-user-group" class="h-5" />
-                <span>Lihat Semua Mitra & Klien</span>
+                <span>{{ $this->getText($content['cta_button']) }}</span>
                 <x-icon name="o-arrow-right" class="h-5 group-hover:translate-x-1 transition-transform" />
             </a>
         </div>
