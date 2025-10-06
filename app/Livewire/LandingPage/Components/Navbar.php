@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class Navbar extends Component
 {
-    public $isEnglish = false;
+    public $isEnglish = true;
 
     public $currentRoute;
 
@@ -16,8 +16,8 @@ class Navbar extends Component
     {
         $this->currentRoute = request()->route()->getName();
 
-        // Load bahasa dari session
-        $this->isEnglish = session('language', 'id') === 'en';
+        // Load bahasa dari session, default English
+        $this->isEnglish = session('language', 'en') === 'en';
 
         $this->loadMenuItems();
     }
@@ -79,7 +79,7 @@ class Navbar extends Component
 
     public function updatedIsEnglish($value)
     {
-        // Simpan pilihan bahasa ke session
+        // Simpan pilihan bahasa ke session (true = English, false = Indonesia)
         session(['language' => $value ? 'en' : 'id']);
 
         // Reload menu items saat bahasa berubah

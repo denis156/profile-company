@@ -7,7 +7,7 @@ use Livewire\Attributes\On;
 
 class Footer extends Component
 {
-    public $isEnglish = false;
+    public $isEnglish = true;
 
     // Company info
     public $companyInfo = [];
@@ -29,8 +29,8 @@ class Footer extends Component
 
     public function mount()
     {
-        // Load bahasa dari session
-        $this->isEnglish = session('language', 'id') === 'en';
+        // Load bahasa dari session, default English
+        $this->isEnglish = session('language', 'en') === 'en';
 
         $this->loadContent();
     }
