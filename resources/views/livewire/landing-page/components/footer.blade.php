@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <p class="text-sm leading-relaxed text-base-content/80">
-                    Perusahaan terpercaya di bidang jasa konstruksi, perdagangan umum, dan konsultan bisnis.
+                    Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan.
                     Memberikan solusi terbaik untuk kebutuhan bisnis Anda.
                 </p>
             </div>
@@ -84,7 +84,7 @@
                     <li class="flex items-start gap-3">
                         <x-icon name="o-map-pin" class="h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span class="text-sm text-base-content/80 leading-relaxed">
-                            Jalan Jenderal A.H Nasution BTN REVALINA BLOK 1/2 Pertigaan Kampus Baru, Kelurahan Lalolara, Kecamatan Kambu, Kota Kendari, Provinsi Sulawesi Tenggara, 93321
+                            Jl. Lawata Kompleks Ruko Lawata No 20. Tobuuha, Kec Puuwatu Kota Kendari Sulawesi Tenggara 93111
                         </span>
                     </li>
                     <li class="flex items-center gap-3">
