@@ -19,9 +19,7 @@
                         <span class="text-primary">Bisnis Anda</span>
                     </h1>
                     <p class="text-lg leading-relaxed text-base-content/80">
-                        PT. Fathiyah Nugraha Group adalah perusahaan terpercaya yang bergerak di bidang jasa
-                        konstruksi, perdagangan material batuan, dan konsultan bisnis dengan komitmen memberikan layanan
-                        terbaik.
+                        PT. Fathiyah Nugraha Group adalah perusahaan terpercaya yang bergerak di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan dengan komitmen memberikan layanan terbaik.
                     </p>
                 </div>
 
