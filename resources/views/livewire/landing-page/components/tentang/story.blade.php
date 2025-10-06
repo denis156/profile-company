@@ -4,50 +4,34 @@
             {{-- Story Content --}}
             <div class="space-y-8" data-aos="fade-right">
                 <div class="space-y-4">
-                    <span class="badge badge-primary badge-lg">Perjalanan Kami</span>
+                    <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                        Dari Visi Menjadi
-                        <span class="text-primary">Kenyataan</span>
+                        {{ $this->getText($content['heading']) }}
+                        <span class="text-primary">{{ $this->getText($content['headingAccent']) }}</span>
                     </h2>
                 </div>
 
                 <div class="space-y-6 text-base-content/80">
-                    <p class="text-lg leading-relaxed">
-                        PT. Fathiyah Nugraha Group didirikan pada tanggal <span
-                            class="font-semibold text-primary">22 Agustus 2022</span>
-                        dengan visi menjadi perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        Pada <span class="font-semibold text-primary">14 Februari 2023</span>, kami memperoleh
-                        Izin Pengangkutan dan Penjualan Komoditas Batuan (IPP) dengan SK No. 230822004081700001,
-                        menandai tonggak penting dalam legalitas dan kredibilitas perusahaan.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        Berlokasi strategis di <span class="font-semibold">Kendari, Sulawesi Tenggara</span>,
-                        kami terus berkembang dengan dukungan 23+ unit armada modern dan tim profesional yang berpengalaman.
-                    </p>
+                    @foreach($content['paragraphs'] as $paragraph)
+                        <p class="text-lg leading-relaxed">
+                            {!! $this->getText($paragraph) !!}
+                        </p>
+                    @endforeach
                 </div>
 
                 {{-- Timeline --}}
                 <div class="space-y-4 pt-4">
-                    <div class="flex items-center gap-4">
-                        <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <x-icon name="o-rocket-launch" class="h-8 text-primary" />
+                    @foreach($content['timeline'] as $item)
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-{{ $item['iconBg'] }}/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <x-icon name="{{ $item['icon'] }}" class="h-8 text-{{ $item['iconBg'] }}" />
+                            </div>
+                            <div>
+                                <div class="font-semibold text-base-content">{{ $this->getText($item['title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($item['subtitle']) }}</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="font-semibold text-base-content">22 Agustus 2022 - Pendirian</div>
-                            <div class="text-sm text-base-content/60">Awal perjalanan bisnis perdagangan dan perkapalan</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <x-icon name="o-shield-check" class="h-8 text-accent" />
-                        </div>
-                        <div>
-                            <div class="font-semibold text-base-content">14 Februari 2023 - Sertifikasi IPP</div>
-                            <div class="text-sm text-base-content/60">Legalitas resmi perdagangan batuan</div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -64,11 +48,11 @@
                 <div class="absolute -bottom-8 -left-8 bg-base-100 rounded-2xl shadow-2xl p-6 max-w-xs z-20">
                     <div class="flex items-center gap-4">
                         <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl font-bold text-primary-content">3+</span>
+                            <span class="text-3xl font-bold text-primary-content">{{ $content['floatingCard']['value'] }}</span>
                         </div>
                         <div>
-                            <div class="text-sm font-semibold text-base-content">Tahun Pengalaman</div>
-                            <div class="text-xs text-base-content/60">Melayani dengan dedikasi</div>
+                            <div class="text-sm font-semibold text-base-content">{{ $this->getText($content['floatingCard']['title']) }}</div>
+                            <div class="text-xs text-base-content/60">{{ $this->getText($content['floatingCard']['subtitle']) }}</div>
                         </div>
                     </div>
                 </div>

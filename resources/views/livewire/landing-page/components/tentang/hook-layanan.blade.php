@@ -2,12 +2,12 @@
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
         {{-- Section Header --}}
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-            <span class="badge badge-accent badge-lg">Apa yang Kami Tawarkan</span>
+            <span class="badge badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
             <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                Layanan Kami
+                {{ $this->getText($content['heading']) }}
             </h2>
             <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
-                Solusi terpadu untuk kebutuhan bisnis Anda dengan layanan profesional dan berkualitas
+                {{ $this->getText($content['description']) }}
             </p>
         </div>
 
@@ -23,14 +23,14 @@
                                 class="h-8 text-primary group-hover:text-primary-content transition-colors" />
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-2xl font-bold text-base-content break-words">Perdagangan Batuan dan Pasir</h3>
+                            <h3 class="text-2xl font-bold text-base-content break-words">{{ $this->getText($content['service1']['title']) }}</h3>
                             <p class="text-base-content/70 break-words">
-                                Penyediaan material batuan berkualitas dan pasir untuk kebutuhan konstruksi dengan izin resmi IPP
+                                {{ $this->getText($content['service1']['description']) }}
                             </p>
                         </div>
                         <div
                             class="flex items-center gap-2 text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-sm">Lihat Detail</span>
+                            <span class="text-sm">{{ $this->getText($content['service1']['cta']) }}</span>
                             <x-icon name="o-arrow-down" class="h-4" />
                         </div>
                     </div>
@@ -47,14 +47,14 @@
                                 class="h-8 text-secondary group-hover:text-secondary-content transition-colors" />
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-2xl font-bold text-base-content break-words">Distributor Semen</h3>
+                            <h3 class="text-2xl font-bold text-base-content break-words">{{ $this->getText($content['service2']['title']) }}</h3>
                             <p class="text-base-content/70 break-words">
-                                Distribusi semen berkualitas tinggi dengan jaringan pengiriman yang luas dan terpercaya
+                                {{ $this->getText($content['service2']['description']) }}
                             </p>
                         </div>
                         <div
                             class="flex items-center gap-2 text-secondary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-sm">Lihat Detail</span>
+                            <span class="text-sm">{{ $this->getText($content['service2']['cta']) }}</span>
                             <x-icon name="o-arrow-down" class="h-4" />
                         </div>
                     </div>
@@ -71,14 +71,14 @@
                                 class="h-8 text-accent group-hover:text-accent-content transition-colors" />
                         </div>
                         <div class="space-y-3">
-                            <h3 class="text-2xl font-bold text-base-content">Jasa Perkapalan</h3>
+                            <h3 class="text-2xl font-bold text-base-content">{{ $this->getText($content['service3']['title']) }}</h3>
                             <p class="text-base-content/70">
-                                Layanan transportasi dan distribusi material via laut dengan armada tongkang yang handal
+                                {{ $this->getText($content['service3']['description']) }}
                             </p>
                         </div>
                         <div
                             class="flex items-center gap-2 text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-sm">Lihat Detail</span>
+                            <span class="text-sm">{{ $this->getText($content['service3']['cta']) }}</span>
                             <x-icon name="o-arrow-down" class="h-4" />
                         </div>
                     </div>
@@ -89,7 +89,7 @@
         {{-- CTA to Layanan Page --}}
         <div class="text-center pt-12" data-aos="fade-up" data-aos-delay="400">
             <a href="{{ route('layanan') }}" wire:navigate class="btn btn-primary btn-lg gap-2 shadow-lg group">
-                <span>Jelajahi Semua Layanan</span>
+                <span>{{ $this->getText($content['cta_button']) }}</span>
                 <x-icon name="o-arrow-right" class="h-5 group-hover:translate-x-1 transition-transform" />
             </a>
         </div>

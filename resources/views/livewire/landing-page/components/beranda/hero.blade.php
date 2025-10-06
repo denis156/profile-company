@@ -11,15 +11,15 @@
                     <div class="inline-block">
                         <span class="badge badge-primary badge-lg gap-2">
                             <x-icon name="o-star" class="h-4" />
-                            Terpercaya Sejak 2022
+                            {{ $this->getText($content['badge']) }}
                         </span>
                     </div>
                     <h1 class="text-5xl lg:text-6xl font-bold leading-tight text-base-content">
-                        Solusi Terpadu untuk
-                        <span class="text-primary">Bisnis Anda</span>
+                        {{ $this->getText($content['heading']) }}
+                        <span class="text-primary">{{ $this->getText($content['headingAccent']) }}</span>
                     </h1>
                     <p class="text-lg leading-relaxed text-base-content/80">
-                        PT. Fathiyah Nugraha Group adalah perusahaan terpercaya yang bergerak di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan dengan komitmen memberikan layanan terbaik.
+                        {{ $this->getText($content['description']) }}
                     </p>
                 </div>
 
@@ -27,28 +27,22 @@
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="/kontak" wire:navigate class="btn btn-accent btn-lg gap-2 shadow-lg">
                         <x-icon name="o-envelope" class="h-6" />
-                        Hubungi Kami
+                        {{ $this->getText($content['ctaContact']) }}
                     </a>
                     <a href="/tentang-kami" wire:navigate class="btn btn-outline btn-lg gap-2 border-2">
                         <x-icon name="o-information-circle" class="h-6" />
-                        Tentang Kami
+                        {{ $this->getText($content['ctaAbout']) }}
                     </a>
                 </div>
 
                 {{-- Stats --}}
                 <div class="grid grid-cols-3 gap-6 pt-8">
-                    <div class="text-center lg:text-left" data-aos="fade-up" data-aos-delay="100">
-                        <div class="text-3xl lg:text-4xl font-bold text-primary">3+</div>
-                        <div class="text-sm text-base-content/60">Tahun Berpengalaman</div>
-                    </div>
-                    <div class="text-center lg:text-left" data-aos="fade-up" data-aos-delay="200">
-                        <div class="text-3xl lg:text-4xl font-bold text-primary">23+</div>
-                        <div class="text-sm text-base-content/60">Unit Armada</div>
-                    </div>
-                    <div class="text-center lg:text-left" data-aos="fade-up" data-aos-delay="300">
-                        <div class="text-3xl lg:text-4xl font-bold text-primary">100%</div>
-                        <div class="text-sm text-base-content/60">Legalitas Resmi</div>
-                    </div>
+                    @foreach($content['stats'] as $index => $stat)
+                        <div class="text-center lg:text-left" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 100 }}">
+                            <div class="text-3xl lg:text-4xl font-bold text-primary">{{ $stat['value'] }}</div>
+                            <div class="text-sm text-base-content/60">{{ $this->getText($stat['label']) }}</div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -69,8 +63,8 @@
                             <x-icon name="o-check-circle" class="h-6 text-accent-content" />
                         </div>
                         <div>
-                            <div class="text-sm font-semibold text-base-content">Terpercaya & Profesional</div>
-                            <div class="text-xs text-base-content/60">Sertifikasi Lengkap</div>
+                            <div class="text-sm font-semibold text-base-content">{{ $this->getText($content['floatingCard']['title']) }}</div>
+                            <div class="text-xs text-base-content/60">{{ $this->getText($content['floatingCard']['subtitle']) }}</div>
                         </div>
                     </div>
                 </div>

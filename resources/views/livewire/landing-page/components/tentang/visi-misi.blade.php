@@ -2,9 +2,9 @@
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
         {{-- Section Header --}}
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-            <span class="badge badge-primary badge-lg">Komitmen Kami</span>
+            <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
             <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                Visi & Misi
+                {{ $this->getText($content['heading']) }}
             </h2>
         </div>
 
@@ -17,14 +17,10 @@
                         <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
                             <x-icon name="o-eye" class="h-8 text-primary-content" />
                         </div>
-                        <h3 class="text-2xl font-bold text-primary">Visi</h3>
+                        <h3 class="text-2xl font-bold text-primary">{{ $this->getText($content['vision']['title']) }}</h3>
                     </div>
                     <p class="text-lg text-base-content/80 leading-relaxed">
-                        Menjadi perusahaan terpercaya dan terdepan dalam menyediakan solusi terpadu di bidang
-                        <span class="font-semibold text-primary">perdagangan batuan dan pasir</span>,
-                        <span class="font-semibold text-primary">distributor semen</span>, dan
-                        <span class="font-semibold text-primary">jasa perkapalan</span>
-                        yang memberikan nilai tambah bagi seluruh stakeholder.
+                        {!! $this->getText($content['vision']['content']) !!}
                     </p>
                 </div>
             </div>
@@ -37,27 +33,17 @@
                         <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center flex-shrink-0">
                             <x-icon name="o-flag" class="h-8 text-accent-content" />
                         </div>
-                        <h3 class="text-2xl font-bold text-accent">Misi</h3>
+                        <h3 class="text-2xl font-bold text-accent">{{ $this->getText($content['mission']['title']) }}</h3>
                     </div>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
-                            <span class="text-base text-base-content/80">
-                                Memberikan layanan berkualitas tinggi dengan profesionalisme dan integritas
-                            </span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
-                            <span class="text-base text-base-content/80">
-                                Mengutamakan kepuasan pelanggan melalui solusi inovatif dan efisien
-                            </span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
-                            <span class="text-base text-base-content/80">
-                                Membangun kemitraan jangka panjang yang saling menguntungkan
-                            </span>
-                        </li>
+                        @foreach($content['mission']['items'] as $item)
+                            <li class="flex items-start gap-3">
+                                <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
+                                <span class="text-base text-base-content/80">
+                                    {{ $this->getText($item) }}
+                                </span>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
