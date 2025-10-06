@@ -8,47 +8,47 @@
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                             <x-icon name="o-cube" class="h-6 text-primary" />
                         </div>
-                        <span class="badge badge-primary badge-lg">Layanan Utama</span>
+                        <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                        <span class="text-primary">Perdagangan Batuan dan Pasir</span>
-                        Berkualitas
+                        <span class="text-primary">{{ $this->getText($content['heading']) }}</span>
+                        {{ $this->getText($content['headingAccent']) }}
                     </h2>
                     <p class="text-lg text-base-content/70 leading-relaxed">
-                        Penyediaan material batuan berkualitas tinggi dan pasir untuk berbagai kebutuhan konstruksi, didukung izin resmi IPP dan armada distribusi yang handal.
+                        {{ $this->getText($content['description']) }}
                     </p>
                 </div>
 
                 {{-- Features --}}
                 <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-base-content">Keunggulan Kami:</h3>
+                    <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['advantagesTitle']) }}</h3>
                     <div class="grid grid-cols-1 gap-4">
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Izin Resmi IPP</div>
-                                <div class="text-sm text-base-content/60">SK No. 230822004081700001 tertanggal 14 Februari 2023</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['feature1Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature1Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Material Berkualitas Tinggi</div>
-                                <div class="text-sm text-base-content/60">Batuan dan pasir pilihan untuk berbagai kebutuhan konstruksi</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['feature2Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature2Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Armada Distribusi Lengkap</div>
-                                <div class="text-sm text-base-content/60">2 Excavator, 9 Truck, 2 Crusher untuk operasional maksimal</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['feature3Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature3Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Pengiriman Tepat Waktu</div>
-                                <div class="text-sm text-base-content/60">Sistem logistik terintegrasi untuk kepastian pasokan</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['feature4Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature4Desc']) }}</div>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
             <div class="relative" data-aos="fade-left">
                 <div class="relative z-10">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="{{ asset('image/pic_3.jpeg') }}" alt="Perdagangan Batuan dan Pasir"
+                        <img src="{{ asset('image/pic_3.jpeg') }}" alt="{{ $this->getText($content['imageAlt']) }}"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="absolute -bottom-6 -right-6 bg-base-100 rounded-2xl shadow-2xl p-6 max-w-xs z-20">
                     <div class="text-center space-y-2">
                         <div class="text-4xl font-bold text-primary">23+</div>
-                        <div class="text-sm text-base-content/60">Unit Armada Siap Operasi</div>
+                        <div class="text-sm text-base-content/60">{{ $this->getText($content['statsLabel']) }}</div>
                     </div>
                 </div>
 

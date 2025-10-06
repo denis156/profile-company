@@ -8,47 +8,47 @@
                         <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
                             <x-icon name="o-arrow-path-rounded-square" class="h-6 text-accent" />
                         </div>
-                        <span class="badge badge-accent badge-lg">Layanan Maritim</span>
+                        <span class="badge badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                        <span class="text-accent">Jasa Perkapalan</span>
-                        Profesional
+                        <span class="text-accent">{{ $this->getText($content['heading']) }}</span>
+                        {{ $this->getText($content['headingContinuation']) }}
                     </h2>
                     <p class="text-lg text-base-content/70 leading-relaxed">
-                        Layanan transportasi dan distribusi material via laut dengan armada tongkang yang handal dan berpengalaman untuk kebutuhan logistik maritim Anda.
+                        {{ $this->getText($content['description']) }}
                     </p>
                 </div>
 
                 {{-- Services List --}}
                 <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-base-content">Layanan Kami:</h3>
+                    <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['sectionTitle']) }}</h3>
                     <div class="grid grid-cols-1 gap-4">
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Transportasi Material via Laut</div>
-                                <div class="text-sm text-base-content/60">Pengiriman batuan, pasir, dan semen menggunakan armada tongkang</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['service1Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service1Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Operasional Dermaga</div>
-                                <div class="text-sm text-base-content/60">Bongkar muat material dengan excavator dan sistem yang efisien</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['service2Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service2Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Logistik Terintegrasi</div>
-                                <div class="text-sm text-base-content/60">Sistem distribusi dari tongkang ke truck untuk pengiriman akhir</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['service3Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service3Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Standar Keamanan Tinggi</div>
-                                <div class="text-sm text-base-content/60">Prosedur keselamatan maritim dan penanganan material yang terjamin</div>
+                                <div class="font-medium text-base-content">{{ $this->getText($content['service4Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service4Desc']) }}</div>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
             <div class="relative" data-aos="fade-left">
                 <div class="relative z-10">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="{{ asset('image/pic_4.jpeg') }}" alt="Jasa Perkapalan"
+                        <img src="{{ asset('image/pic_4.jpeg') }}" alt="{{ $this->getText($content['altText']) }}"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -71,8 +71,8 @@
                             <x-icon name="o-truck" class="h-6 text-accent-content" />
                         </div>
                         <div>
-                            <div class="text-sm font-semibold text-base-content">Armada Tongkang</div>
-                            <div class="text-xs text-base-content/60">Transportasi Maritim Handal</div>
+                            <div class="text-sm font-semibold text-base-content">{{ $this->getText($content['floatingCardTitle']) }}</div>
+                            <div class="text-xs text-base-content/60">{{ $this->getText($content['floatingCardDesc']) }}</div>
                         </div>
                     </div>
                 </div>

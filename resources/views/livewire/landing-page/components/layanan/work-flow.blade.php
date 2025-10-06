@@ -2,13 +2,13 @@
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
         {{-- Section Header --}}
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-            <span class="badge badge-primary badge-lg">Cara Kerja</span>
+            <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
             <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                Proses Kerja yang
-                <span class="text-primary">Terstruktur</span>
+                {{ $this->getText($content['heading1']) }}
+                <span class="text-primary">{{ $this->getText($content['heading2']) }}</span>
             </h2>
             <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
-                Kami mengikuti proses kerja profesional untuk memastikan setiap proyek berjalan lancar
+                {{ $this->getText($content['description']) }}
             </p>
         </div>
 
@@ -25,9 +25,9 @@
                             <x-icon name="o-arrow-right" class="h-6 text-base-content/20" />
                         </div>
                         <div class="space-y-2">
-                            <h3 class="text-xl font-semibold text-base-content">Konsultasi</h3>
+                            <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['step1Title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Diskusi kebutuhan dan analisis proyek Anda
+                                {{ $this->getText($content['step1Desc']) }}
                             </p>
                         </div>
                     </div>
@@ -45,9 +45,9 @@
                             <x-icon name="o-arrow-right" class="h-6 text-base-content/20" />
                         </div>
                         <div class="space-y-2">
-                            <h3 class="text-xl font-semibold text-base-content">Perencanaan</h3>
+                            <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['step2Title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Penyusunan proposal dan timeline detail
+                                {{ $this->getText($content['step2Desc']) }}
                             </p>
                         </div>
                     </div>
@@ -65,9 +65,9 @@
                             <x-icon name="o-arrow-right" class="h-6 text-base-content/20" />
                         </div>
                         <div class="space-y-2">
-                            <h3 class="text-xl font-semibold text-base-content">Eksekusi</h3>
+                            <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['step3Title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Pelaksanaan proyek dengan monitoring ketat
+                                {{ $this->getText($content['step3Desc']) }}
                             </p>
                         </div>
                     </div>
@@ -85,9 +85,9 @@
                             <x-icon name="o-check-circle" class="h-6 text-success" />
                         </div>
                         <div class="space-y-2">
-                            <h3 class="text-xl font-semibold text-base-content">Selesai</h3>
+                            <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['step4Title']) }}</h3>
                             <p class="text-sm text-base-content/70">
-                                Penyerahan dan evaluasi hasil proyek
+                                {{ $this->getText($content['step4Desc']) }}
                             </p>
                         </div>
                     </div>
