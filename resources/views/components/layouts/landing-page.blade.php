@@ -83,15 +83,35 @@
 
 {{-- AOS INIT --}}
 <script>
+    // Init AOS
     AOS.init({
         once: true, // Animasi hanya sekali
-        duration: 800, // Durasi animasi (default: 400ms) - lebih lambat & smooth
-        easing: 'ease-out-cubic', // Easing function untuk smooth motion
-        offset: 120, // Offset dari viewport (pixel) - trigger lebih awal
+        duration: 800, // Durasi animasi
+        easing: 'ease-out-cubic', // Easing function
+        offset: 120, // Offset dari viewport
         delay: 0, // Delay default
-        anchorPlacement: 'top-bottom', // Element position vs viewport
+        anchorPlacement: 'top-bottom', // Element position
+        disable: false, // Jangan disable AOS
     });
-    AOS.refreshHard();
+
+    // Preserve AOS state saat Livewire update
+    document.addEventListener('livewire:init', () => {
+        Livewire.hook('morph.updated', ({ el, component }) => {
+            // Setelah Livewire update, langsung set semua elemen AOS yang visible jadi animated
+            // untuk menghindari animasi ulang
+            requestAnimationFrame(() => {
+                const aosElements = el.querySelectorAll('[data-aos]');
+                aosElements.forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    // Jika elemen sudah visible di viewport, langsung tambahkan aos-animate
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        element.classList.add('aos-animate');
+                        element.classList.add('aos-init');
+                    }
+                });
+            });
+        });
+    });
 </script>
 
 </html>
