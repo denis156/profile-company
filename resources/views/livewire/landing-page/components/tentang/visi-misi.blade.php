@@ -21,9 +21,9 @@
                     </div>
                     <p class="text-lg text-base-content/80 leading-relaxed">
                         Menjadi perusahaan terpercaya dan terdepan dalam menyediakan solusi terpadu di bidang
-                        <span class="font-semibold text-primary">jasa konstruksi</span>,
-                        <span class="font-semibold text-primary">perdagangan material batuan</span>, dan
-                        <span class="font-semibold text-primary">konsultan bisnis</span>
+                        <span class="font-semibold text-primary">perdagangan batuan dan pasir</span>,
+                        <span class="font-semibold text-primary">distributor semen</span>, dan
+                        <span class="font-semibold text-primary">jasa perkapalan</span>
                         yang memberikan nilai tambah bagi seluruh stakeholder.
                     </p>
                 </div>

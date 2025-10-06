@@ -15,7 +15,7 @@
                     <p class="text-lg leading-relaxed">
                         PT. Fathiyah Nugraha Group didirikan pada tanggal <span
                             class="font-semibold text-primary">22 Agustus 2022</span>
-                        dengan visi menjadi perusahaan terpercaya di bidang jasa konstruksi dan perdagangan material batuan.
+                        dengan visi menjadi perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan.
                     </p>
                     <p class="text-lg leading-relaxed">
                         Pada <span class="font-semibold text-primary">14 Februari 2023</span>, kami memperoleh
@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <div class="font-semibold text-base-content">22 Agustus 2022 - Pendirian</div>
-                            <div class="text-sm text-base-content/60">Awal perjalanan bisnis konstruksi</div>
+                            <div class="text-sm text-base-content/60">Awal perjalanan bisnis perdagangan dan perkapalan</div>
                         </div>
                     </div>
                     <div class="flex items-center gap-4">
