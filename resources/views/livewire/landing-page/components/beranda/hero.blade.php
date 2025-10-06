@@ -9,8 +9,8 @@
             <div class="space-y-8" data-aos="fade-right">
                 <div class="space-y-6">
                     <div class="inline-block">
-                        <span class="badge badge-primary badge-lg gap-2">
-                            <x-icon name="o-star" class="h-4" />
+                        <span class="badge badge-soft badge-primary badge-lg gap-2">
+                            <div aria-label="status" class="status status-accent animate-pulse"></div>
                             {{ $this->getText($content['badge']) }}
                         </span>
                     </div>

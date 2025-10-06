@@ -6,7 +6,10 @@
         <div class="max-w-4xl mx-auto text-center space-y-8">
             {{-- Title --}}
             <div class="space-y-6" data-aos="fade-up">
-                <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
+                <span class="badge badge-soft badge-primary badge-lg gap-2">
+                    <div aria-label="status" class="status status-accent animate-pulse"></div>
+                    {{ $this->getText($content['badge']) }}
+                </span>
                 <h1 class="text-5xl lg:text-6xl font-bold text-base-content">
                     {{ $this->getText($content['heading']) }}
                     <p class="text-primary">{{ $content['company'] }}</p>
@@ -18,7 +21,7 @@
 
             {{-- Quick Stats --}}
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8" data-aos="fade-up" data-aos-delay="200">
-                @foreach($content['stats'] as $stat)
+                @foreach ($content['stats'] as $stat)
                     <div class="space-y-2">
                         <div class="text-4xl font-bold text-primary">{{ $stat['value'] }}</div>
                         <div class="text-sm text-base-content/60">{{ $this->getText($stat['label']) }}</div>

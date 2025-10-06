@@ -20,21 +20,12 @@
                         </div>
                     </div>
                 </div>
-
-                {{-- Decorative Element --}}
-                <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10">
-                </div>
             </div>
 
             {{-- Content --}}
             <div class="space-y-8 lg:order-2 order-1" data-aos="fade-left">
                 <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
-                            <x-icon name="o-building-storefront" class="h-6 text-secondary" />
-                        </div>
-                        <span class="badge badge-secondary badge-lg">{{ $this->getText($content['badge_trusted']) }}</span>
-                    </div>
+                    <span class="badge badge-soft badge-secondary badge-lg">{{ $this->getText($content['badge_trusted']) }}</span>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
                         <span class="text-secondary">{{ $this->getText($content['title_highlight']) }}</span>
                         {{ $this->getText($content['title_main']) }}

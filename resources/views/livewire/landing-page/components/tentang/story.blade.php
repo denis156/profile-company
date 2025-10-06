@@ -4,7 +4,7 @@
             {{-- Story Content --}}
             <div class="space-y-8" data-aos="fade-right">
                 <div class="space-y-4">
-                    <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
+                    <span class="badge badge-soft badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
                         {{ $this->getText($content['heading']) }}
                         <span class="text-primary">{{ $this->getText($content['headingAccent']) }}</span>

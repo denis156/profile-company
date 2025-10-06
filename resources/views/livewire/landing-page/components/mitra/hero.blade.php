@@ -6,7 +6,10 @@
         <div class="max-w-4xl mx-auto text-center space-y-8">
             {{-- Title --}}
             <div class="space-y-6" data-aos="fade-up">
-                <span class="badge badge-primary badge-lg">Partner Terpercaya</span>
+                <span class="badge badge-soft badge-primary badge-lg">
+                    <div aria-label="status" class="status status-accent animate-pulse"></div>
+                    Partner Terpercaya
+                </span>
                 <h1 class="text-5xl lg:text-6xl font-bold text-base-content">
                     Mitra Kerja
                     <p class="text-primary">PT. Fathiyah Nugraha Group</p>

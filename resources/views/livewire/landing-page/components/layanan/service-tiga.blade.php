@@ -4,12 +4,7 @@
             {{-- Content --}}
             <div class="space-y-8" data-aos="fade-right">
                 <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                            <x-icon name="o-arrow-path-rounded-square" class="h-6 text-accent" />
-                        </div>
-                        <span class="badge badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
-                    </div>
+                    <span class="badge badge-soft badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
                         <span class="text-accent">{{ $this->getText($content['heading']) }}</span>
                         {{ $this->getText($content['headingContinuation']) }}
@@ -21,34 +16,43 @@
 
                 {{-- Services List --}}
                 <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['sectionTitle']) }}</h3>
+                    <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['sectionTitle']) }}
+                    </h3>
                     <div class="grid grid-cols-1 gap-4">
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['service1Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service1Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['service1Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service1Desc']) }}
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['service2Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service2Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['service2Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service2Desc']) }}
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['service3Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service3Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['service3Title']) }}</div>
+                                <div class="text-sm text-base-content/60">
+                                    {{ $this->getText($content['service3Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-accent flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['service4Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['service4Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['service4Title']) }}</div>
+                                <div class="text-sm text-base-content/60">
+                                    {{ $this->getText($content['service4Desc']) }}</div>
                             </div>
                         </div>
                     </div>
@@ -71,14 +75,13 @@
                             <x-icon name="o-truck" class="h-6 text-accent-content" />
                         </div>
                         <div>
-                            <div class="text-sm font-semibold text-base-content">{{ $this->getText($content['floatingCardTitle']) }}</div>
-                            <div class="text-xs text-base-content/60">{{ $this->getText($content['floatingCardDesc']) }}</div>
+                            <div class="text-sm font-semibold text-base-content">
+                                {{ $this->getText($content['floatingCardTitle']) }}</div>
+                            <div class="text-xs text-base-content/60">
+                                {{ $this->getText($content['floatingCardDesc']) }}</div>
                         </div>
                     </div>
                 </div>
-
-                {{-- Decorative Element --}}
-                <div class="absolute -top-12 -right-12 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10"></div>
             </div>
         </div>
     </div>

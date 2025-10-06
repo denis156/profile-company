@@ -6,7 +6,7 @@
                 <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                     <x-icon name="o-cube" class="h-6 text-primary" />
                 </div>
-                <h3 class="text-3xl font-bold text-base-content">Industri Nikel</h3>
+                <h3 class="text-3xl font-bold text-primary">Industri Nikel</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {{-- VDNi --}}
@@ -127,7 +127,7 @@
         {{-- Stone Mining Category --}}
         <div class="mb-20" data-aos="fade-up">
             <div class="flex items-center justify-end gap-4 my-8">
-                <h3 class="text-3xl font-bold text-base-content">Stone Mining</h3>
+                <h3 class="text-3xl font-bold text-secondary">Stone Mining</h3>
                 <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
                     <x-icon name="o-cube-transparent" class="h-6 text-secondary" />
                 </div>
@@ -187,7 +187,7 @@
                 <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
                     <x-icon name="o-building-office-2" class="h-6 text-accent" />
                 </div>
-                <h3 class="text-3xl font-bold text-base-content">Perusahaan Konstruksi</h3>
+                <h3 class="text-3xl font-bold text-accent">Perusahaan Konstruksi</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {{-- Gasing Sulawesi --}}

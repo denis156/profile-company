@@ -6,7 +6,10 @@
         <div class="max-w-4xl mx-auto text-center space-y-8">
             {{-- Title --}}
             <div class="space-y-6" data-aos="fade-up">
-                <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
+                <span class="badge badge-soft badge-primary badge-lg gap-2">
+                    <div aria-label="status" class="status status-accent animate-pulse"></div>
+                    {{ $this->getText($content['badge']) }}
+                </span>
                 <h1 class="text-5xl lg:text-6xl font-bold text-base-content">
                     {{ $this->getText($content['heading']) }}
                     <p class="text-primary">{{ $this->getText($content['headingAccent']) }}</p>
@@ -20,15 +23,18 @@
             <div class="grid grid-cols-3 gap-4 md:gap-6 pt-8" data-aos="fade-up" data-aos-delay="200">
                 <div class="space-y-1 md:space-y-2">
                     <div class="text-2xl md:text-4xl font-bold text-primary">10+</div>
-                    <div class="text-xs md:text-sm text-base-content/60">{{ $this->getText($content['stat1Label']) }}</div>
+                    <div class="text-xs md:text-sm text-base-content/60">{{ $this->getText($content['stat1Label']) }}
+                    </div>
                 </div>
                 <div class="space-y-1 md:space-y-2">
                     <div class="text-2xl md:text-4xl font-bold text-primary">100%</div>
-                    <div class="text-xs md:text-sm text-base-content/60">{{ $this->getText($content['stat2Label']) }}</div>
+                    <div class="text-xs md:text-sm text-base-content/60">{{ $this->getText($content['stat2Label']) }}
+                    </div>
                 </div>
                 <div class="space-y-1 md:space-y-2">
                     <div class="text-2xl md:text-4xl font-bold text-primary">IPP</div>
-                    <div class="text-xs md:text-sm text-base-content/60">{{ $this->getText($content['stat3Label']) }}</div>
+                    <div class="text-xs md:text-sm text-base-content/60">{{ $this->getText($content['stat3Label']) }}
+                    </div>
                 </div>
             </div>
         </div>

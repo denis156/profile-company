@@ -3,7 +3,7 @@
         {{-- Section Header --}}
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
             <div class="inline-block">
-                <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
+                <span class="badge badge-soft badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
             </div>
             <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
                 {{ $this->getText($content['heading']) }} <br class="hidden lg:block" />

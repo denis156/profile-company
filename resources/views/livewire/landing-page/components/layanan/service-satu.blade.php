@@ -4,12 +4,7 @@
             {{-- Content --}}
             <div class="space-y-8" data-aos="fade-right">
                 <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                            <x-icon name="o-cube" class="h-6 text-primary" />
-                        </div>
-                        <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
-                    </div>
+                    <span class="badge badge-soft badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
                         <span class="text-primary">{{ $this->getText($content['heading']) }}</span>
                         {{ $this->getText($content['headingAccent']) }}
@@ -21,34 +16,43 @@
 
                 {{-- Features --}}
                 <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-base-content">{{ $this->getText($content['advantagesTitle']) }}</h3>
+                    <h3 class="text-xl font-semibold text-base-content">
+                        {{ $this->getText($content['advantagesTitle']) }}</h3>
                     <div class="grid grid-cols-1 gap-4">
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['feature1Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature1Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['feature1Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature1Desc']) }}
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['feature2Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature2Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['feature2Title']) }}</div>
+                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature2Desc']) }}
+                                </div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['feature3Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature3Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['feature3Title']) }}</div>
+                                <div class="text-sm text-base-content/60">
+                                    {{ $this->getText($content['feature3Desc']) }}</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">{{ $this->getText($content['feature4Title']) }}</div>
-                                <div class="text-sm text-base-content/60">{{ $this->getText($content['feature4Desc']) }}</div>
+                                <div class="font-medium text-base-content">
+                                    {{ $this->getText($content['feature4Title']) }}</div>
+                                <div class="text-sm text-base-content/60">
+                                    {{ $this->getText($content['feature4Desc']) }}</div>
                             </div>
                         </div>
                     </div>
@@ -71,9 +75,6 @@
                         <div class="text-sm text-base-content/60">{{ $this->getText($content['statsLabel']) }}</div>
                     </div>
                 </div>
-
-                {{-- Decorative Element --}}
-                <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
             </div>
         </div>
     </div>

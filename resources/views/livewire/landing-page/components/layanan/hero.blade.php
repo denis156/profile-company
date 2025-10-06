@@ -6,7 +6,10 @@
         <div class="max-w-4xl mx-auto text-center space-y-8">
             {{-- Title --}}
             <div class="space-y-6" data-aos="fade-up">
-                <span class="badge badge-primary badge-lg">{{ $this->getText($content['badge']) }}</span>
+                <span class="badge badge-soft badge-primary badge-lg gap-2">
+                    <div aria-label="status" class="status status-accent animate-pulse"></div>
+                    {{ $this->getText($content['badge']) }}
+                </span>
                 <h1 class="text-5xl lg:text-6xl font-bold text-base-content">
                     {{ $this->getText($content['heading']) }}
                     <p class="text-primary">{{ $this->getText($content['headingAccent']) }}</p>
@@ -19,22 +22,28 @@
             {{-- Quick Service Icons --}}
             <div class="grid grid-cols-3 gap-4 md:gap-6 pt-8" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex flex-col items-center gap-2 md:gap-3">
-                    <div class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center">
+                    <div
+                        class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center">
                         <x-icon name="o-cube" class="h-6 md:h-8 text-primary" />
                     </div>
-                    <div class="text-xs md:text-sm font-medium text-base-content text-center">{{ $this->getText($content['services'][0]['label']) }}</div>
+                    <div class="text-xs md:text-sm font-medium text-base-content text-center">
+                        {{ $this->getText($content['services'][0]['label']) }}</div>
                 </div>
                 <div class="flex flex-col items-center gap-2 md:gap-3">
-                    <div class="w-12 h-12 md:w-16 md:h-16 bg-secondary/10 rounded-xl md:rounded-2xl flex items-center justify-center">
+                    <div
+                        class="w-12 h-12 md:w-16 md:h-16 bg-secondary/10 rounded-xl md:rounded-2xl flex items-center justify-center">
                         <x-icon name="o-building-storefront" class="h-6 md:h-8 text-secondary" />
                     </div>
-                    <div class="text-xs md:text-sm font-medium text-base-content text-center">{{ $this->getText($content['services'][1]['label']) }}</div>
+                    <div class="text-xs md:text-sm font-medium text-base-content text-center">
+                        {{ $this->getText($content['services'][1]['label']) }}</div>
                 </div>
                 <div class="flex flex-col items-center gap-2 md:gap-3">
-                    <div class="w-12 h-12 md:w-16 md:h-16 bg-accent/10 rounded-xl md:rounded-2xl flex items-center justify-center">
+                    <div
+                        class="w-12 h-12 md:w-16 md:h-16 bg-accent/10 rounded-xl md:rounded-2xl flex items-center justify-center">
                         <x-icon name="o-arrow-path-rounded-square" class="h-6 md:h-8 text-accent" />
                     </div>
-                    <div class="text-xs md:text-sm font-medium text-base-content text-center">{{ $this->getText($content['services'][2]['label']) }}</div>
+                    <div class="text-xs md:text-sm font-medium text-base-content text-center">
+                        {{ $this->getText($content['services'][2]['label']) }}</div>
                 </div>
             </div>
         </div>

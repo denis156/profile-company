@@ -2,7 +2,7 @@
     <div class="container mx-auto max-w-7xl px-6 lg:px-8">
         {{-- Section Header --}}
         <div class="text-center space-y-4 mb-16" data-aos="fade-up">
-            <span class="badge badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
+            <span class="badge badge-soft badge-accent badge-lg">{{ $this->getText($content['badge']) }}</span>
             <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
                 {{ $this->getText($content['heading']) }}
             </h2>
