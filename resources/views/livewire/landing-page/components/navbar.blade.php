@@ -18,52 +18,28 @@
         {{-- Navbar Center: Desktop Menu --}}
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 gap-2">
-                <li>
-                    <a href="{{ route('beranda') }}" wire:navigate
-                        class="text-base font-medium transition-colors {{ request()->routeIs('beranda') ? 'text-primary' : 'text-base-content/80 hover:text-primary' }}">
-                        Beranda
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('tentang-kami') }}" wire:navigate
-                        class="text-base font-medium transition-colors {{ request()->routeIs('tentang-kami') ? 'text-primary' : 'text-base-content/80 hover:text-primary' }}">
-                        Tentang Kami
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('layanan') }}" wire:navigate
-                        class="text-base font-medium transition-colors {{ request()->routeIs('layanan') ? 'text-primary' : 'text-base-content/80 hover:text-primary' }}">
-                        Layanan
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('produk') }}" wire:navigate
-                        class="text-base font-medium transition-colors {{ request()->routeIs('produk') ? 'text-primary' : 'text-base-content/80 hover:text-primary' }}">
-                        Produk
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('mitra') }}" wire:navigate
-                        class="text-base font-medium transition-colors {{ request()->routeIs('mitra') ? 'text-primary' : 'text-base-content/80 hover:text-primary' }}">
-                        Mitra
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('galeri') }}" wire:navigate
-                        class="text-base font-medium transition-colors {{ request()->routeIs('galeri') ? 'text-primary' : 'text-base-content/80 hover:text-primary' }}">
-                        Galeri
-                    </a>
-                </li>
+                @foreach($menuItems as $item)
+                    <li>
+                        <x-button
+                            label="{{ $this->getLabel($item) }}"
+                            link="{{ route($item['route']) }}"
+                            class="{{ $currentRoute === $item['route'] ? 'btn-primary' : 'btn-ghost btn-primary' }}"
+                        />
+                    </li>
+                @endforeach
             </ul>
         </div>
 
-        {{-- Navbar End: CTA Button & Mobile Dropdown --}}
-        <div class="navbar-end">
-            {{-- CTA Button - Hidden on mobile, visible on tablet & desktop --}}
-            <a href="{{ route('kontak') }}" wire:navigate class="hidden md:inline-flex btn btn-accent text-accent-content gap-2 px-6">
-                <x-icon name="o-envelope" class="h-5" />
-                Hubungi Kami
-            </a>
+        {{-- Navbar End: Language Swap & Mobile Dropdown --}}
+        <div class="navbar-end gap-4">
+            {{-- Language Swap - Hidden on mobile, visible on tablet & desktop --}}
+            <div class="hidden md:block" x-data="{ loaded: false }" x-init="$nextTick(() => loaded = true)">
+                <label class="swap btn btn-neutral cursor-pointer transition-opacity duration-200" :class="{ 'opacity-0': !loaded, 'opacity-100': loaded }">
+                    <input type="checkbox" wire:model.live="isEnglish" @if($isEnglish) checked @endif />
+                    <div class="swap-on"><x-icon name="o-language" /> English</div>
+                    <div class="swap-off"><x-icon name="o-language" /> Indonesia</div>
+                </label>
+            </div>
 
             {{-- Mobile Dropdown Menu - Only visible on mobile --}}
             <div class="dropdown dropdown-end md:hidden">
@@ -71,42 +47,22 @@
                     <x-icon name="o-bars-3" class="h-6" />
                 </div>
                 <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-56 p-2 shadow-lg">
-                    <li>
-                        <a href="{{ route('beranda') }}" wire:navigate class="{{ request()->routeIs('beranda') ? 'text-primary' : '' }}">
-                            Beranda
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('tentang-kami') }}" wire:navigate class="{{ request()->routeIs('tentang-kami') ? 'text-primary' : '' }}">
-                            Tentang Kami
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('layanan') }}" wire:navigate class="{{ request()->routeIs('layanan') ? 'text-primary' : '' }}">
-                            Layanan
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('produk') }}" wire:navigate class="{{ request()->routeIs('produk') ? 'text-primary' : '' }}">
-                            Produk
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('mitra') }}" wire:navigate class="{{ request()->routeIs('mitra') ? 'text-primary' : '' }}">
-                            Mitra
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('galeri') }}" wire:navigate class="{{ request()->routeIs('galeri') ? 'text-primary' : '' }}">
-                            Galeri
-                        </a>
-                    </li>
-                    <li class="border-t border-base-300 mt-2 pt-2">
-                        <a href="{{ route('kontak') }}" wire:navigate class="btn btn-accent btn-sm text-accent-content gap-2 w-full">
-                            <x-icon name="o-envelope" class="h-4" />
-                            Hubungi Kami
-                        </a>
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box border-1 border-primary z-[1] mt-3 w-56 p-2 shadow-sm shadow-primary">
+                    @foreach($menuItems as $item)
+                        <li class="mt-2">
+                            <x-button
+                                label="{{ $this->getLabel($item) }}"
+                                link="{{ route($item['route']) }}"
+                                class="btn-xs btn-block {{ $currentRoute === $item['route'] ? 'btn-primary' : 'btn-ghost btn-primary' }}"
+                            />
+                        </li>
+                    @endforeach
+                    <li class="border-t border-base-300 mt-2 pt-2 flex justify-center" x-data="{ loaded: false }" x-init="$nextTick(() => loaded = true)">
+                        <label class="swap btn btn-neutral btn-xs btn-block cursor-pointer transition-opacity duration-200" :class="{ 'opacity-0': !loaded, 'opacity-100': loaded }">
+                            <input type="checkbox" wire:model.live="isEnglish" @if($isEnglish) checked @endif />
+                            <div class="swap-on"><x-icon name="o-language" /> English</div>
+                            <div class="swap-off"><x-icon name="o-language" /> Indonesia</div>
+                        </label>
                     </li>
                 </ul>
             </div>
