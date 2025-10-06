@@ -29,10 +29,10 @@
                             Your browser does not support the video tag.
                         </video>
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-base-content/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-gradient-to-t from-base-content/60 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <div
-                            class="absolute bottom-0 left-0 right-0 p-6 text-base-100 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            class="absolute bottom-0 left-0 right-0 p-6 text-base-100 lg:translate-y-4 lg:group-hover:translate-y-0 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300">
                             <h4 class="text-lg font-bold">Operasional Tongkang</h4>
                             <p class="text-sm mt-1">Tim ahli kami mengoperasikan excavator untuk distribusi material pasir yang efisien di kapal tongkang</p>
                         </div>
@@ -48,10 +48,10 @@
                         <img src="{{ asset('image/pic_6.jpeg') }}" alt="Material Loading"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-base-content/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-gradient-to-t from-base-content/60 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <div
-                            class="absolute bottom-0 left-0 right-0 p-6 text-base-100 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            class="absolute bottom-0 left-0 right-0 p-6 text-base-100 lg:translate-y-4 lg:group-hover:translate-y-0 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300">
                             <h4 class="text-lg font-bold">Distribusi Material Premium</h4>
                             <p class="text-sm mt-1">Sistem logistik terintegrasi untuk pengiriman semen dari truck menuju fasilitas penyimpanan modern</p>
                         </div>
@@ -67,10 +67,10 @@
                         <img src="{{ asset('image/pic_7.svg') }}" alt="Cement Loading"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-base-content/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            class="absolute inset-0 bg-gradient-to-t from-base-content/60 to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                         </div>
                         <div
-                            class="absolute bottom-0 left-0 right-0 p-6 text-base-100 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                            class="absolute bottom-0 left-0 right-0 p-6 text-base-100 lg:translate-y-4 lg:group-hover:translate-y-0 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300">
                             <h4 class="text-lg font-bold">Operasi Dermaga Profesional</h4>
                             <p class="text-sm mt-1">Transfer material semen berkualitas dari tongkang ke armada transportasi dengan standar keamanan tinggi</p>
                         </div>
