@@ -5,7 +5,7 @@
             <div class="relative lg:order-1 order-2" data-aos="fade-right">
                 <div class="relative z-10">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="{{ asset('image/pic_4.jpeg') }}" alt="Perdagangan Umum"
+                        <img src="{{ asset('image/pic_7.svg') }}" alt="Distributor Semen"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -31,59 +31,55 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
-                            <x-icon name="o-shopping-cart" class="h-6 text-secondary" />
+                            <x-icon name="o-building-storefront" class="h-6 text-secondary" />
                         </div>
                         <span class="badge badge-secondary badge-lg">Layanan Terpercaya</span>
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                        <span class="text-secondary">Perdagangan Material Batuan</span>
-                        & Konstruksi
+                        <span class="text-secondary">Distributor Semen</span>
+                        Terpercaya
                     </h2>
                     <p class="text-lg text-base-content/70 leading-relaxed">
-                        Penyedia material batuan dan kebutuhan konstruksi dengan Izin Pengangkutan dan Penjualan
-                        (IPP) resmi. Kami menjamin kualitas dan legalitas produk.
+                        Distribusi semen berkualitas tinggi dengan jaringan pengiriman yang luas dan sistem logistik terintegrasi untuk kepastian pasokan Anda.
                     </p>
                 </div>
 
-                {{-- Product Categories --}}
+                {{-- Keunggulan --}}
                 <div class="space-y-4">
-                    <h3 class="text-xl font-semibold text-base-content">Produk Kami:</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="card bg-base-200 p-4">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <x-icon name="o-cube" class="h-5 text-secondary" />
-                                </div>
-                                <div>
-                                    <div class="font-medium text-sm text-base-content">Material Batuan</div>
-                                    <div class="text-xs text-base-content/60">Batu Split, Sirtu, Pasir</div>
-                                </div>
+                    <h3 class="text-xl font-semibold text-base-content">Keunggulan Kami:</h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-start gap-3">
+                            <x-icon name="o-check-circle" class="h-6 text-secondary flex-shrink-0 mt-0.5" />
+                            <div>
+                                <div class="font-medium text-base-content">Produk Berkualitas Tinggi</div>
+                                <div class="text-sm text-base-content/60">Semen premium dari brand terpercaya dengan standar SNI</div>
                             </div>
                         </div>
-                        <div class="card bg-base-200 p-4">
-                            <div class="flex items-center gap-3">
-                                <div
-                                    class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <x-icon name="o-cube" class="h-5 text-secondary" />
-                                </div>
-                                <div>
-                                    <div class="font-medium text-sm text-base-content">Material Konstruksi</div>
-                                    <div class="text-xs text-base-content/60">Semen, Besi, dll</div>
-                                </div>
+                        <div class="flex items-start gap-3">
+                            <x-icon name="o-check-circle" class="h-6 text-secondary flex-shrink-0 mt-0.5" />
+                            <div>
+                                <div class="font-medium text-base-content">Jaringan Distribusi Luas</div>
+                                <div class="text-sm text-base-content/60">Jangkauan pengiriman ke seluruh wilayah Sulawesi Tenggara</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <x-icon name="o-check-circle" class="h-6 text-secondary flex-shrink-0 mt-0.5" />
+                            <div>
+                                <div class="font-medium text-base-content">Stok Terjamin</div>
+                                <div class="text-sm text-base-content/60">Persediaan selalu tersedia untuk kebutuhan proyek Anda</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {{-- Legal Badge --}}
+                {{-- Partnership Badge --}}
                 <div class="card bg-gradient-to-r from-secondary/5 to-secondary/10 border border-secondary/20 p-6">
                     <div class="flex items-start gap-4">
-                        <x-icon name="o-shield-check" class="h-6 text-secondary flex-shrink-0" />
+                        <x-icon name="o-truck" class="h-6 text-secondary flex-shrink-0" />
                         <div class="space-y-1">
-                            <div class="font-semibold text-base-content">Legalitas Terjamin</div>
+                            <div class="font-semibold text-base-content">Pengiriman Terpercaya</div>
                             <div class="text-sm text-base-content/70">
-                                Memiliki IPP resmi dengan KBLI 46634 untuk perdagangan komoditas batuan
+                                Didukung armada pengiriman lengkap dengan 9 unit truck dan sistem tracking real-time
                             </div>
                         </div>
                     </div>

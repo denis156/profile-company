@@ -6,17 +6,16 @@
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                            <x-icon name="o-wrench-screwdriver" class="h-6 text-primary" />
+                            <x-icon name="o-cube" class="h-6 text-primary" />
                         </div>
                         <span class="badge badge-primary badge-lg">Layanan Utama</span>
                     </div>
                     <h2 class="text-4xl lg:text-5xl font-bold text-base-content">
-                        <span class="text-primary">Jasa Konstruksi</span>
-                        Profesional
+                        <span class="text-primary">Perdagangan Batuan dan Pasir</span>
+                        Berkualitas
                     </h2>
                     <p class="text-lg text-base-content/70 leading-relaxed">
-                        Layanan konstruksi dengan standar kualitas tinggi, didukung armada modern dan tim
-                        berpengalaman untuk menyelesaikan proyek Anda tepat waktu.
+                        Penyediaan material batuan berkualitas tinggi dan pasir untuk berbagai kebutuhan konstruksi, didukung izin resmi IPP dan armada distribusi yang handal.
                     </p>
                 </div>
 
@@ -27,33 +26,29 @@
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Armada Lengkap & Modern</div>
-                                <div class="text-sm text-base-content/60">2 Excavator, 9 Truck, 2 Crusher, dan
-                                    10 kendaraan operasional</div>
+                                <div class="font-medium text-base-content">Izin Resmi IPP</div>
+                                <div class="text-sm text-base-content/60">SK No. 230822004081700001 tertanggal 14 Februari 2023</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Tim Profesional Berpengalaman</div>
-                                <div class="text-sm text-base-content/60">3+ tahun pengalaman di bidang konstruksi
-                                </div>
+                                <div class="font-medium text-base-content">Material Berkualitas Tinggi</div>
+                                <div class="text-sm text-base-content/60">Batuan dan pasir pilihan untuk berbagai kebutuhan konstruksi</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Manajemen Proyek Terintegrasi</div>
-                                <div class="text-sm text-base-content/60">Monitoring dan kontrol kualitas di setiap
-                                    tahap</div>
+                                <div class="font-medium text-base-content">Armada Distribusi Lengkap</div>
+                                <div class="text-sm text-base-content/60">2 Excavator, 9 Truck, 2 Crusher untuk operasional maksimal</div>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
                             <x-icon name="o-check-circle" class="h-6 text-primary flex-shrink-0 mt-0.5" />
                             <div>
-                                <div class="font-medium text-base-content">Tepat Waktu & Budget</div>
-                                <div class="text-sm text-base-content/60">Komitmen menyelesaikan proyek sesuai
-                                    timeline</div>
+                                <div class="font-medium text-base-content">Pengiriman Tepat Waktu</div>
+                                <div class="text-sm text-base-content/60">Sistem logistik terintegrasi untuk kepastian pasokan</div>
                             </div>
                         </div>
                     </div>
@@ -64,7 +59,7 @@
             <div class="relative" data-aos="fade-left">
                 <div class="relative z-10">
                     <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="{{ asset('image/pic_5.png') }}" alt="Jasa Konstruksi"
+                        <img src="{{ asset('image/pic_3.jpeg') }}" alt="Perdagangan Batuan dan Pasir"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
