@@ -82,7 +82,6 @@
         {{-- CTA to Galeri Page --}}
         <div class="text-center pt-12" data-aos="fade-up" data-aos-delay="500">
             <a href="{{ route('galeri') }}" wire:navigate class="btn btn-primary btn-lg gap-2 shadow-lg group">
-                <x-icon name="o-photo" class="h-5" />
                 <span>Lihat Semua Dokumentasi</span>
                 <x-icon name="o-arrow-right" class="h-5 group-hover:translate-x-1 transition-transform" />
             </a>
