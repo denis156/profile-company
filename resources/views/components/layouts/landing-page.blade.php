@@ -10,8 +10,10 @@
     {{-- Primary Meta Tags --}}
     <title>{{ isset($title) ? $title . ' - ' . config('app.name') : config('app.name') }}</title>
     <meta name="title" content="{{ isset($title) ? $title . ' - ' . config('app.name') : config('app.name') }}">
-    <meta name="description" content="PT. Fathiyah Nugraha Group - Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan. Berpengalaman sejak 2022 dengan armada lengkap dan legalitas resmi IPP.">
-    <meta name="keywords" content="PT Fathiyah Nugraha Group, FNG, perdagangan batuan Kendari, perdagangan pasir, distributor semen, jasa perkapalan, stone crusher, pasir, semen, IPP resmi, Sulawesi Tenggara">
+    <meta name="description"
+        content="PT. Fathiyah Nugraha Group - Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan. Berpengalaman sejak 2022 dengan armada lengkap dan legalitas resmi IPP.">
+    <meta name="keywords"
+        content="PT Fathiyah Nugraha Group, FNG, perdagangan batuan Kendari, perdagangan pasir, distributor semen, jasa perkapalan, stone crusher, pasir, semen, IPP resmi, Sulawesi Tenggara">
     <meta name="author" content="PT. Fathiyah Nugraha Group">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Indonesia">
@@ -21,7 +23,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="{{ isset($title) ? $title . ' - ' . config('app.name') : config('app.name') }}">
-    <meta property="og:description" content="PT. Fathiyah Nugraha Group - Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan sejak 2022.">
+    <meta property="og:description"
+        content="PT. Fathiyah Nugraha Group - Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan sejak 2022.">
     <meta property="og:image" content="{{ asset('image/fng_logo.svg') }}">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -29,8 +32,10 @@
     {{-- Twitter --}}
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="{{ isset($title) ? $title . ' - ' . config('app.name') : config('app.name') }}">
-    <meta property="twitter:description" content="PT. Fathiyah Nugraha Group - Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan sejak 2022.">
+    <meta property="twitter:title"
+        content="{{ isset($title) ? $title . ' - ' . config('app.name') : config('app.name') }}">
+    <meta property="twitter:description"
+        content="PT. Fathiyah Nugraha Group - Perusahaan terpercaya di bidang perdagangan batuan dan pasir, distributor semen, dan jasa perkapalan sejak 2022.">
     <meta property="twitter:image" content="{{ asset('image/fng_logo.svg') }}">
 
     {{-- Geo Tags --}}
@@ -50,6 +55,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body class="min-h-dvh antialiased bg-base-100 font-sans overflow-x-hidden">
@@ -69,7 +75,7 @@
 
     {{--  TOAST area --}}
     <x-toast />
-
+    @livewireScripts
 </body>
 
 {{-- AOS JS CDN --}}
