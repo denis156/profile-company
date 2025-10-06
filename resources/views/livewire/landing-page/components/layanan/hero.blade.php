@@ -21,21 +21,21 @@
             <div class="grid grid-cols-3 gap-4 md:gap-6 pt-8" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex flex-col items-center gap-2 md:gap-3">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-xl md:rounded-2xl flex items-center justify-center">
-                        <x-icon name="o-wrench-screwdriver" class="h-6 md:h-8 text-primary" />
+                        <x-icon name="o-cube" class="h-6 md:h-8 text-primary" />
                     </div>
-                    <div class="text-xs md:text-sm font-medium text-base-content text-center">Jasa Konstruksi</div>
+                    <div class="text-xs md:text-sm font-medium text-base-content text-center">Perdagangan Batuan dan Pasir</div>
                 </div>
                 <div class="flex flex-col items-center gap-2 md:gap-3">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-secondary/10 rounded-xl md:rounded-2xl flex items-center justify-center">
-                        <x-icon name="o-shopping-cart" class="h-6 md:h-8 text-secondary" />
+                        <x-icon name="o-building-storefront" class="h-6 md:h-8 text-secondary" />
                     </div>
-                    <div class="text-xs md:text-sm font-medium text-base-content text-center">Perdagangan Material Batuan</div>
+                    <div class="text-xs md:text-sm font-medium text-base-content text-center">Distributor Semen</div>
                 </div>
                 <div class="flex flex-col items-center gap-2 md:gap-3">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-accent/10 rounded-xl md:rounded-2xl flex items-center justify-center">
-                        <x-icon name="o-chart-bar" class="h-6 md:h-8 text-accent" />
+                        <x-icon name="o-arrow-path-rounded-square" class="h-6 md:h-8 text-accent" />
                     </div>
-                    <div class="text-xs md:text-sm font-medium text-base-content text-center">Konsultan Bisnis</div>
+                    <div class="text-xs md:text-sm font-medium text-base-content text-center">Jasa Perkapalan</div>
                 </div>
             </div>
         </div>
